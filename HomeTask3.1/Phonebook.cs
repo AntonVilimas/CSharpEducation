@@ -171,6 +171,7 @@ namespace HomeTask3._1
     }
     /// <summary>
     /// Считывание контак листа содержащего масив из двух индексов Имя и Телефон с 0 и 1 индексом соотвественно
+    /// с проверкой на не NUll и пусто
     /// </summary>
     private void ReadPhoneBook()
     {
@@ -193,7 +194,7 @@ namespace HomeTask3._1
       }
     }
     /// <summary>
-    /// Сохраанение контак листа (записной книжки)
+    /// Сохранение контакт листа (записной книжки), и проверка если нет ни одной записи будет создан пустой файл
     /// </summary>
     public void SavePhoneBook()
     {
@@ -207,7 +208,7 @@ namespace HomeTask3._1
       else
       {
         File.Create("Phonebook.txt");
-        Console.WriteLine("Список пуст сохранен пустой фаил");
+        Console.WriteLine("Список пуст сохранен пустой файл");
       }
 
     }

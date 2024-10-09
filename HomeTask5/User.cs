@@ -13,17 +13,17 @@ namespace HomeTask5
     #region Поля и свойства
 
     /// <summary>
-    /// 
+    /// Айди.
     /// </summary>
     public int Id;
 
     /// <summary>
-    /// 
+    /// Имя.
     /// </summary>
     public string Name;
 
     /// <summary>
-    /// 
+    /// Электронная почта.
     /// </summary>
     public string Email;
     #endregion
@@ -31,7 +31,7 @@ namespace HomeTask5
     #region Конструкторы
 
     /// <summary>
-    /// 
+    /// Данные айди имени и электронной почты.
     /// </summary>
     /// <param name="id">Айди.</param>
     /// <param name="name">Имя.</param>

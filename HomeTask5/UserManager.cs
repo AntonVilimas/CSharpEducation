@@ -11,12 +11,12 @@ namespace HomeTask5
     #region Поля и свойства
 
     /// <summary>
-    /// 
+    /// Уникальный индекс.
     /// </summary>
     private int Index = 0;
 
     /// <summary>
-    /// 
+    /// Список пользователей.
     /// </summary>
     private List<User> ListUsers;
     #endregion
@@ -24,11 +24,11 @@ namespace HomeTask5
     #region Методы
 
     /// <summary>
-    /// 
+    /// Добавление пользователя.
     /// </summary>
-    /// <param name="user"></param>
-    /// <exception cref="ArgumentNullException"></exception>
-    /// <exception cref="UserAlreadyExistsException"></exception>
+    /// <param name="user">Имя</param>
+    /// <exception cref="ArgumentNullException">Ошибка отстсвуют данные пользователя</exception>
+    /// <exception cref="UserAlreadyExistsException">Существующий пользователь</exception>
     public void AddUser(User user)
     {
       if (user == null)
@@ -50,12 +50,12 @@ namespace HomeTask5
       }
     }
     /// <summary>
-    /// 
+    /// Поиск пользователя
     /// </summary>
     /// <param name="Id"></param>
     /// <returns></returns>
-    /// <exception cref="UserNotFoundException"></exception>
-    /// <exception cref="ArgumentNullException"></exception>
+    /// <exception cref="UserNotFoundException">Пользователь не найден</exception>
+    /// <exception cref="ArgumentNullException">Пустой список</exception>
     public User GetUser(int Id)
     {
       if (this.ListUsers.Any())
@@ -65,18 +65,18 @@ namespace HomeTask5
           if (user.Id == Id)
             return user;
         }
-        throw new UserNotFoundException("пользователь не найден");
+        throw new UserNotFoundException("Пользователь не найден");
       }
       else
         throw new ArgumentNullException("Пустой список");
     }
 
     /// <summary>
-    /// 
+    /// Удаление пользователя.
     /// </summary>
     /// <param name="Id"></param>
-    /// <exception cref="UserNotFoundException"></exception>
-    /// <exception cref="ArgumentNullException"></exception>
+    /// <exception cref="UserNotFoundException">Пользователь не найден</exception>
+    /// <exception cref="ArgumentNullException">Пустой список</exception>
     public void RemoveUser(int Id)
     {
       if (this.ListUsers.Any())
@@ -86,7 +86,7 @@ namespace HomeTask5
           if (user.Id == Id)
             this.ListUsers.Remove(user);     
         }
-        throw new UserNotFoundException("пользователь не найден");
+        throw new UserNotFoundException("Пользователь не найден");
       }
       else
         throw new ArgumentNullException("Пустой список");
@@ -109,7 +109,7 @@ namespace HomeTask5
     #region Конструкторы
 
     /// <summary>
-    /// 
+    /// Список пользователей.
     /// </summary>
     public UserManager()
     {

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask4
 {
+  /// <summary>
+  /// Работник.
+  /// </summary>
   internal abstract class Employee
   {
     #region Поля и свойства
@@ -21,7 +24,7 @@ namespace HomeTask4
     public decimal BaseSalary { get; set; }
 
     /// <summary>
-    /// Уникальный индекс работника
+    /// Уникальный индекс работника.
     /// </summary>
     public int Index {  get; set; }
     #endregion

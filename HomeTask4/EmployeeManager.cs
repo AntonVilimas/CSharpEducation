@@ -13,12 +13,12 @@ namespace HomeTask4
     #region Поля и свойства
 
     /// <summary>
-    /// Уникальный индекс работника
+    /// Уникальный индекс работника.
     /// </summary>
     private int Index = 0;
     
     /// <summary>
-    /// Список работников
+    /// Список работников.
     /// </summary>
     private Dictionary <int,Employee> listEmployee;
     #endregion
@@ -85,7 +85,7 @@ namespace HomeTask4
     #region Конструкторы
 
     /// <summary>
-    /// 
+    /// Список работников.
     /// </summary>
     public EmployeeManager()
     {

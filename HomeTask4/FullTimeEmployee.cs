@@ -19,7 +19,7 @@ namespace HomeTask4
     #region Конструкторы
 
     /// <summary>
-    /// Конструктор на постоянного работника
+    /// Конструктор на постоянного работника.
     /// </summary>
     /// <param name="name">Имя работника</param>
     /// <param name="baseSalary">Бащовая ставка работника</param>

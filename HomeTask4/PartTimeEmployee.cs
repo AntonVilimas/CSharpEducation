@@ -30,7 +30,7 @@ namespace HomeTask4
     #region Конструкторы
 
     /// <summary>
-    /// Конструктор временного работника
+    /// Конструктор временного работника.
     /// </summary>
     /// <param name="name">Имя работника</param>
     /// <param name="baseSalary">Базовая рабочая ставка работника</param>

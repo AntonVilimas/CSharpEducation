@@ -7,26 +7,26 @@ using System.Threading.Tasks;
 namespace HomeTask4
 {
   /// <summary>
-  /// Унаследование данных работника
+  /// Унаследование данных работника.
   /// </summary>
   /// <typeparam name="T">"Работник"</typeparam>
   internal interface IEmpolyeeManager <T> where T : Employee
   {
     /// <summary>
-    /// Добавление работника
+    /// Добавление работника.
     /// </summary>
     /// <param name="emloyee">Имя работника</param>
     void Add(T emloyee);
 
     /// <summary>
-    /// Возвращение поиска работника
+    /// Возвращение поиска работника.
     /// </summary>
     /// <param name="name">Имя работника</param>
     /// <returns></returns>
     T Get(string name);
 
     /// <summary>
-    /// Измененние данных работника
+    /// Измененние данных работника.
     /// </summary>
     /// <param name="emloyee"></param>
     void Update(T emloyee);

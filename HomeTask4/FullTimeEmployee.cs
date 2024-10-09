@@ -19,10 +19,10 @@ namespace HomeTask4
     #region Конструкторы
 
     /// <summary>
-    /// 
+    /// Конструктор на постоянного работника
     /// </summary>
-    /// <param name="name"></param>
-    /// <param name="baseSalary"></param>
+    /// <param name="name">Имя работника</param>
+    /// <param name="baseSalary">Бащовая ставка работника</param>
     public FullTimeEmployee(string name, decimal baseSalary) : base(name, baseSalary)
     {
     }

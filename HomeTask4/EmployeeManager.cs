@@ -13,12 +13,12 @@ namespace HomeTask4
     #region Поля и свойства
 
     /// <summary>
-    /// 
+    /// Уникальный индекс работника
     /// </summary>
     private int Index = 0;
     
     /// <summary>
-    /// 
+    /// Список работников
     /// </summary>
     private Dictionary <int,Employee> listEmployee;
     #endregion
@@ -38,7 +38,7 @@ namespace HomeTask4
           Index++;
         }
         else
-          throw new ArgumentException("Существующий сотрудник");
+          throw new ArgumentException("Существующий работник");
       }
       else
       {
@@ -57,7 +57,7 @@ namespace HomeTask4
           if (employee.Value.Name.ToLower() == name.ToLower())
             return employee.Value;
         }
-        throw new ArgumentException("Сотрудник не найден");
+        throw new ArgumentException("Работник не найден");
       }
       else
         throw new ArgumentNullException("Пустой список");
@@ -75,7 +75,7 @@ namespace HomeTask4
             return;
           }
         }
-        throw new ArgumentException("Сотрудник не найден");
+        throw new ArgumentException("Работник не найден");
       }
       else
         throw new ArgumentNullException("Пустой список");

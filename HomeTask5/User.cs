@@ -42,5 +42,6 @@ namespace HomeTask5
       this.Name = name;
       this.Email = email;
     }
+    #endregion
   }
 }

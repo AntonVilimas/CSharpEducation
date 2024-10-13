@@ -14,6 +14,7 @@ namespace HomeTask4
     {
       return BaseSalary;
     }
+
     #endregion
 
     #region Конструкторы
@@ -21,11 +22,12 @@ namespace HomeTask4
     /// <summary>
     /// Конструктор на постоянного работника.
     /// </summary>
-    /// <param name="name">Имя работника</param>
-    /// <param name="baseSalary">Бащовая ставка работника</param>
+    /// <param name="name">Имя работника.</param>
+    /// <param name="baseSalary">Бащовая ставка работника.</param>
     public FullTimeEmployee(string name, decimal baseSalary) : base(name, baseSalary)
     {
     }
+
     #endregion
   }
 }

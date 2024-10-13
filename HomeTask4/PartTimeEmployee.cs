@@ -14,6 +14,7 @@ namespace HomeTask4
     /// Отработанные часы.
     /// </summary>
     public float TimeWork {  get; set; } 
+    
     #endregion
 
     #region Базовый класс
@@ -25,18 +26,20 @@ namespace HomeTask4
       else
         throw new ArgumentException("Бездельничал");
     }
+    
     #endregion
 
     #region Конструкторы
 
     /// <summary>
-    /// Конструктор временного работника.
+    /// Конструктор.
     /// </summary>
-    /// <param name="name">Имя работника</param>
-    /// <param name="baseSalary">Базовая рабочая ставка работника</param>
+    /// <param name="name">Имя работника.</param>
+    /// <param name="baseSalary">Базовая рабочая ставка работника.</param>
     public PartTimeEmployee (string name, decimal baseSalary) : base(name, baseSalary)
     {
     }
+    
     #endregion
   }
 }

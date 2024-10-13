@@ -21,6 +21,7 @@ namespace HomeTask4
     /// Список работников.
     /// </summary>
     private Dictionary <int,Employee> listEmployee;
+
     #endregion
 
     #region Методы
@@ -80,6 +81,7 @@ namespace HomeTask4
       else
         throw new ArgumentNullException("Пустой список");
     }
+
     #endregion
 
     #region Конструкторы

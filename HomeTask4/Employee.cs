@@ -27,6 +27,7 @@ namespace HomeTask4
     /// Уникальный индекс работника.
     /// </summary>
     public int Index {  get; set; }
+
     #endregion
 
     #region Методы
@@ -35,6 +36,7 @@ namespace HomeTask4
     /// Расчет зарплаты.
     /// </summary>
     public abstract decimal CalculateSalary();
+
     #endregion
 
     #region Конструкторы
@@ -42,13 +44,14 @@ namespace HomeTask4
     /// <summary>
     /// Создание работника.
     /// </summary>
-    /// <param name="name">Имя работника</param>
-    /// <param name="baseSalary">Базовая рабочая ставка</param>
+    /// <param name="name">Имя работника.</param>
+    /// <param name="baseSalary">Базовая рабочая ставка.</param>
     public Employee(string name, decimal baseSalary)
     {
       Name = name;
       BaseSalary = baseSalary;
     }
+
     #endregion
   }
 }

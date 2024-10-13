@@ -18,7 +18,7 @@ namespace HomeTask4
     /// <summary>
     /// Главное меню. 
     /// </summary>
-    /// <param name="manager">Работник.Инженер</param>
+    /// <param name="manager">Работник.Инженер.</param>
     static void MainMenu(EmployeeManager manager)
     {
       try

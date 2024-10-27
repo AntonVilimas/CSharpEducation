@@ -1,28 +1,30 @@
-﻿namespace Phonebook;
-
-/// <summary>
-/// Номер телефона.
-/// </summary>
-public class PhoneNumber
+﻿namespace Phonebook
 {
-  /// <summary>
-  /// Значение номера телефона.
-  /// </summary>
-  public string Number { get; }
 
   /// <summary>
-  /// Тип номера телефона.
+  /// Номер телефона.
   /// </summary>
-  public PhoneNumberType Type { get; }
-
-  /// <summary>
-  /// Конструктор.
-  /// </summary>
-  /// <param name="number">Значение номера телефона.</param>
-  /// <param name="type">Тип номера телефона.</param>
-  public PhoneNumber(string number, PhoneNumberType type)
+  public class PhoneNumber
   {
-    this.Number = number;
-    this.Type = type;
+    /// <summary>
+    /// Значение номера телефона.
+    /// </summary>
+    public string Number { get; }
+
+    /// <summary>
+    /// Тип номера телефона.
+    /// </summary>
+    public PhoneNumberType Type { get; }
+
+    /// <summary>
+    /// Конструктор.
+    /// </summary>
+    /// <param name="number">Значение номера телефона.</param>
+    /// <param name="type">Тип номера телефона.</param>
+    public PhoneNumber(string number, PhoneNumberType type)
+    {
+      this.Number = number;
+      this.Type = type;
+    }
   }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask3.1", "HomeTask3.1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask4", "HomeTask4\HomeTask4.csproj", "{ADE5CA6B-B954-44E4-A4A7-DAA84BBA940C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook", "PhonebookEgor\Phonebook\Phonebook.csproj", "{432B4EA7-A3BA-4551-B99A-196A3AD22ABB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{ADE5CA6B-B954-44E4-A4A7-DAA84BBA940C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADE5CA6B-B954-44E4-A4A7-DAA84BBA940C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADE5CA6B-B954-44E4-A4A7-DAA84BBA940C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{432B4EA7-A3BA-4551-B99A-196A3AD22ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432B4EA7-A3BA-4551-B99A-196A3AD22ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432B4EA7-A3BA-4551-B99A-196A3AD22ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432B4EA7-A3BA-4551-B99A-196A3AD22ABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

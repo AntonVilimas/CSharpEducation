@@ -49,7 +49,12 @@ namespace Phonebook
     /// <returns>Список всех абонентов.</returns>
     public IEnumerable<Subscriber> GetAll()
     {
-      return this.phonebook;
+      if (this.phonebook.Any())
+      {
+        return this.phonebook;
+      }
+      else
+        throw new NullReferenceException("Список пуст");
     }
 
     /// <summary>
@@ -59,12 +64,18 @@ namespace Phonebook
     /// <exception cref="InvalidOperationException">Возникает, если абонент уже существует в книге.</exception>
     public void AddSubscriber(Subscriber subscriber)
     {
-      if (this.phonebook.Contains(subscriber))
-        throw new InvalidOperationException("Unable to add subscriber. Subscriber exists");
+      if (subscriber != null)
+      {
+        if (this.phonebook.Contains(subscriber) && this.phonebook.Where(s => s.Id == subscriber.Id).ToList().Count != 0)
+          throw new InvalidOperationException("Unable to add subscriber. Subscriber exists");
 
-      PhoneNumberValidator.ValidateList(subscriber.PhoneNumbers);
+        if (subscriber.PhoneNumbers != null)
+          PhoneNumberValidator.ValidateList(subscriber.PhoneNumbers);
 
-      this.phonebook.Add(subscriber);
+        this.phonebook.Add(subscriber);
+      }
+      else
+        throw new ArgumentNullException($"Подписчик {subscriber} не заполнен");
     }
 
     /// <summary>
@@ -74,13 +85,28 @@ namespace Phonebook
     /// <param name="number">Добавляемый номер абонента.</param>
     public void AddNumberToSubscriber(Subscriber subscriber, PhoneNumber number)
     {
-      List<PhoneNumber> newNumbers = new List<PhoneNumber>(subscriber.PhoneNumbers)
-    {
-        number
-    };
-      var subscriberWithNewNumber = new Subscriber(subscriber.Id, subscriber.Name, newNumbers);
+      if (this.phonebook.Any())
+      {
+        if (!string.IsNullOrEmpty(number.Number))
+        {
+          PhoneNumberValidator.Validate(number);
+          if (this.phonebook.Single(s => s.Id == subscriber.Id).Equals(subscriber))
+          {
+            var newNumbers = new List<PhoneNumber>(subscriber.PhoneNumbers)
+          {
+              number
+          };
+            var subscriberWithNewNumber = new Subscriber(subscriber.Id, subscriber.Name, newNumbers);
 
-      this.UpdateSubscriber(subscriber, subscriberWithNewNumber);
+            this.UpdateSubscriber(subscriber, subscriberWithNewNumber);
+          }
+          else
+            throw new ArgumentException($"Такой подподписчик {subscriber.Name} отсутсвует");
+        }
+        else throw new ArgumentException("Новый номер телефона не указан");
+      }
+      else
+        throw new NullReferenceException("Список пуст");
     }
 
     /// <summary>

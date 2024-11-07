@@ -1,4 +1,9 @@
-﻿namespace Phonebook;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Phonebook
+{ 
 
 /// <summary>
 /// Абонент справочника.
@@ -26,7 +31,7 @@ public class Subscriber
 
   #region Базовый класс
 
-  public override bool Equals(object? obj)
+  public override bool Equals(object obj)
   {
     if (obj is Subscriber subscriber)
       return subscriber.Id == this.Id;
@@ -66,4 +71,5 @@ public class Subscriber
   }
 
   #endregion
+}
 }
